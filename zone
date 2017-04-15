@@ -1,0 +1,26 @@
+domains:
+- domain: geoip.viktorstanchev.com
+  ttl: 30
+  records:
+    geoip.viktorstanchev.com:
+      - soa: ns1.viktorstanchev.com hostmaster.example.com 2014090125 7200 3600 1209600 3600
+      - ns: ns1.viktorstanchev.com
+    internal.service.geoip.viktorstanchev.com:
+      - a: 192.168.0.1
+    internal2.service.geoip.viktorstanchev.com:
+      - a: 192.168.0.2
+    unknown.service.geoip.viktorstanchev.com:
+      - a: 192.168.0.3
+    na.service.geoip.viktorstanchev.com:
+      - a: 192.168.0.4
+    sa.service.geoip.viktorstanchev.com:
+      - a: 192.168.0.5
+    as.service.geoip.viktorstanchev.com:
+      - a: 192.168.0.6
+    eu.service.geoip.viktorstanchev.com:
+      - a: 192.168.0.7
+  services:
+    service.geoip.viktorstanchev.com:
+      default: ['%cn.service.geoip.viktorstanchev.com', 'unknown.service.geoip.viktorstanchev.com']
+      172.31.0.0/16: 'internal.service.geoip.viktorstanchev.com'
+      172.32.0.0/16: 'internal2.service.geoip.viktorstanchev.com'
