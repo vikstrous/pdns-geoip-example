@@ -30,7 +30,7 @@ Deploy the DNS server on the nameserver.
 docker run --rm -it -p 53:53/udp --name dns viktorstanchev/pdns-geoip-example
 ```
 
-Now you can query `service.geoip.viktorstanchev.com` from different contients and
+Now you can query `service.geoip.viktorstanchev.com` from different continents and
 get different results. An easy way to verify this is https://dnschecker.org/.
 The DNS server with the example config will also respond with custom results for
 queries coming from the subnets `172.31.0.0/16` and `172.32.0.0./16`, so you can
